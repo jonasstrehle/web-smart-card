@@ -47,7 +47,7 @@ try {
   let command = new Uint8Array([0x00, 0xA4, 0x04, 0x00, 0x0A, 0xA0, 0x00, 0x00,
       0x00, 0x62, 0x03, 0x01, 0x0C, 0x06, 0x01]);
 
-  let responseData = connection.transmit(command);
+  let responseData = await connection.transmit(command);
   console.log("Card responded with: " + responseData);
 
   await connection.disconnect();
